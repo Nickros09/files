@@ -1,6 +1,12 @@
 # Asterisk 18.6.0 для Astra Linux SE 1.6 amd64
 
-Готовый DEB-пакет, исходники и инструкция доступны в [Releases](https://github.com/Nickros09/files/releases).
+[Скачать DEB-пакет](https://raw.githubusercontent.com/Nickros09/files/master/asterisk-custom_18.6.0-1+astra16_amd64.deb)
+
+Файл: `asterisk-custom_18.6.0-1+astra16_amd64.deb` (около 4,3 МБ).
+
+SHA256: `2773a350482ca7c12891ec628ab68b2c2fbc1f656ede8bfba3f7e95ad0fe8875`
+
+[Инструкция](README.ru.txt) · [Отчёт проверки](VALIDATION.txt) · [Исходники и сценарии сборки](asterisk-18.6.0-build-sources.tar.gz)
 
 Встроены pjproject 2.10 и jansson 2.12. Сборка выполнена в Debian 9 Stretch с glibc 2.24 для базовой архитектуры x86-64, без BUILD_NATIVE и без требования AVX.
 
@@ -19,4 +25,4 @@ sudo systemctl enable --now asterisk
 sudo asterisk -rvvv
 ```
 
-Перед установкой поверх существующего Asterisk сохраните его конфигурацию и данные. Системные зависимости устанавливаются из репозиториев ОС; звуковые файлы не включены. Подробности и ограничения проверки приведены в README.ru.txt и VALIDATION.txt в релизе.
+Перед установкой поверх существующего Asterisk сохраните его конфигурацию и данные. Системные зависимости устанавливаются из репозиториев ОС; звуковые файлы не включены. Подробности и ограничения проверки приведены в README.ru.txt и VALIDATION.txt в этом репозитории.
