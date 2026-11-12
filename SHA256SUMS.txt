@@ -1,0 +1,2 @@
+2773a350482ca7c12891ec628ab68b2c2fbc1f656ede8bfba3f7e95ad0fe8875  asterisk-custom_18.6.0-1+astra16_amd64.deb
+1718c153b8c477d50949ec6d48a66c53ea90e8f3ee3be0c48045e07621eba076  asterisk-18.6.0-build-sources.tar.gz
