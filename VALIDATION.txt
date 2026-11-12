@@ -1,0 +1,38 @@
+Проверка сборки Asterisk 18.6.0
+Дата: 12 ноября 2026 г.
+
+1. Исходники: asterisk-18.6.0.tar.gz с downloads.asterisk.org.
+   third-party/versions.mak: JANSSON_VERSION=2.12, PJPROJECT_VERSION=2.10.
+   Архивы библиотек проверены по MD5, включённым в исходники Asterisk.
+   SHA256 архивов приведены в SOURCE-SHA256SUMS.txt.
+2. Сборка: Debian 9 Stretch amd64, GCC 6; CFLAGS и CXXFLAGS:
+   -O2 -march=x86-64 -mtune=generic. BUILD_NATIVE отключён.
+   Эти параметры подтверждены в Makefile jansson и build.mak pjproject.
+3. dpkg-deb успешно создал пакет; владельцы файлов root:root.
+   Зависимости вычислены dpkg-shlibdeps, минимальная libc6 >= 2.17.
+4. Установка через apt в отдельном чистом контейнере Debian 9 прошла.
+   Системные зависимости получены из archive.debian.org.
+   dpkg --audit не выдал замечаний.
+5. Нативный запуск: Asterisk Ready, core show version -> 18.6.0,
+   pjproject show buildopts -> PJ_VERSION 2.10,
+   module show like pjsip -> 48 modules loaded.
+   core stop now -> штатный выход 0.
+6. Запуск через QEMU 7.2.22 -cpu Nehalem: Asterisk Ready,
+   PJ_VERSION 2.10, 48 модулей PJSIP; штатный выход 0.
+   Модель Nehalem использует старый набор инструкций без AVX.
+   QEMU 2.8 сначала прошёл запуск, но завис при завершении с ошибкой
+   эмуляции signal frame; результат пункта 6 получен на QEMU 7.2.22.
+7. Jansson встроен статически; заголовок собранной библиотеки содержит
+   JANSSON_VERSION "2.12". Внешний libjansson для запуска не требуется.
+   pjproject входит в поставляемую libasteriskpj.so.2.
+
+Ограничения проверки:
+- На Astra Linux и реальном i5-760 пакет не запускался.
+- systemd внутри тестового контейнера не работал; запуск службы через
+  systemctl на целевой машине ещё нужно проверить.
+- SIP-регистрация, звонки, RTP, TLS и SRTP не проверялись.
+- С примерами конфигурации модули cel_sqlite3_custom/cdr_sqlite3_custom
+  отказываются загружаться из-за отсутствующих настроек. Это не мешает
+  запуску ядра/PJSIP. Настройки поставляются как примеры.
+- Это не автономный комплект всех системных зависимостей и не официальный
+  пакет Astra. Настройки мандатного контроля Astra могут требовать доработки.
