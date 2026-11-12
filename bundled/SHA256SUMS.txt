@@ -1,0 +1,1 @@
+278234fe3db1eed94b8caa46bafed47abe1c234df8132f592e877ced4877d102  asterisk-custom_18.6.0-2+astra16.bundle_amd64.deb
