@@ -1,0 +1,148 @@
+No ethernet interface found for seeding global EID. You will have to set it manually.
+Asterisk 18.6.0 built by root @ 5a73f67cd875 on a x86_64 running Linux on 2026-11-12 16:54:39 UTC
+No ethernet interface found for seeding global EID. You will have to set it manually.
+
+PBX Core settings
+-----------------
+  Version:                     18.6.0
+  Build Options:               OPTIONAL_API
+  Maximum calls:               Not set
+  Maximum open file handles:   1024
+  Root console verbosity:      0
+  Current console verbosity:   0
+  Debug level:                 0
+  Trace level:                 0
+  Maximum load average:        0.000000
+  Minimum free memory:         0 MB
+  Startup time:                22:54:01
+  Last reload time:            22:54:01
+  System:                      Linux/6.18.57 built by root on x86_64 2026-11-12 16:54:39 UTC
+  System name:                 
+  Entity ID:                   00:00:00:00:00:00
+  PBX UUID:                    497504ae-cb47-4468-aaf1-e8bf015e809b
+  Default language:            en
+  Language prefix:             Enabled
+  User name and group:         /
+  Executable includes:         Disabled
+  Transcode via SLIN:          Enabled
+  Transmit silence during rec: Disabled
+  Generic PLC:                 Enabled
+  Generic PLC on equal codecs: Disabled
+  Hide Msg Chan AMI events:    Disabled
+  Min DTMF duration::          80
+  Cache media frames:          Enabled
+  RTP use dynamic payloads:    1
+  RTP dynamic payload types:   35-63,96-127
+
+* Subsystems
+  -------------
+  Manager (AMI):               Disabled
+  Web Manager (AMI/HTTP):      Disabled
+  Call data records:           Enabled
+  Realtime Architecture (ARA): Disabled
+
+* Directories
+  -------------
+  Configuration file:          /etc/asterisk/asterisk.conf
+  Configuration directory:     /etc/asterisk
+  Module directory:            /usr/lib/asterisk/modules
+  Spool directory:             /var/spool/asterisk
+  Log directory:               /var/log/asterisk
+  Run/Sockets directory:       /var/run/asterisk
+  PID file:                    /var/run/asterisk/asterisk.pid
+  VarLib directory:            /var/lib/asterisk
+  Data directory:              /var/lib/asterisk
+  ASTDB:                       /var/lib/asterisk/astdb
+  IAX2 Keys directory:         /var/lib/asterisk/keys
+  AGI Scripts directory:       /var/lib/asterisk/agi-bin
+
+
+No ethernet interface found for seeding global EID. You will have to set it manually.
+PJPROJECT compile time config currently running against:
+PJ_CC_NAME/VER_(1,2,3)    : gcc-6.3.0
+PJ_DEBUG                  : 0
+PJ_ENABLE_EXTRA_CHECK     : 1
+PJ_EXCEPTION_USE_WIN32_SEH: 0
+PJ_FUNCTIONS_ARE_INLINED  : 0
+PJ_HAS_EVENT_OBJ          : 1
+PJ_HAS_EXCEPTION_NAMES    : 1
+PJ_HAS_FLOATING_POINT     : 1
+PJ_HAS_HIGH_RES_TIMER     : 1
+PJ_HAS_INT64              : 1
+PJ_HAS_IPV6               : 1
+PJ_HAS_PENTIUM            : 0
+PJ_HAS_POOL_ALT_API       : 0
+PJ_HAS_SEMAPHORE          : 1
+PJ_HAS_TCP                : 1
+PJ_HAS_THREADS            : 1
+PJ_IOQUEUE_HAS_SAFE_UNREG : 1
+PJ_IOQUEUE_MAX_HANDLES    : 5000
+PJ_IS_(BIG/LITTLE)_ENDIAN : little-endian
+PJ_LOG_MAX_LEVEL          : 6
+PJ_LOG_MAX_SIZE           : 4000
+PJ_LOG_USE_STACK_BUFFER   : 1
+PJ_LOG_USE_STACK_BUFFER   : 1
+PJ_MAX_EXCEPTION_ID       : 16
+PJ_MAX_HOSTNAME           : 256
+PJ_M_NAME                 : x86_64
+PJ_OS_HAS_CHECK_STACK     : 0
+PJ_OS_NAME                : x86_64-unknown-linux-gnu
+PJ_POOL_DEBUG             : 0
+PJ_TIMESTAMP_USE_RDTSC:   : 0
+PJ_VERSION                : 2.10
+ioqueue type              : epoll
+No ethernet interface found for seeding global EID. You will have to set it manually.
+Module                         Description                              Use Count  Status      Support Level
+chan_pjsip.so                  PJSIP Channel Driver                     0          Running              core
+func_pjsip_aor.so              Get information about a PJSIP AOR        0          Running              core
+func_pjsip_contact.so          Get information about a PJSIP contact    0          Running              core
+func_pjsip_endpoint.so         Get information about a PJSIP endpoint   0          Running              core
+res_pjsip.so                   Basic SIP resource                       47         Running              core
+res_pjsip_acl.so               PJSIP ACL Resource                       0          Running              core
+res_pjsip_authenticator_digest.so PJSIP authentication resource            0          Running              core
+res_pjsip_caller_id.so         PJSIP Caller ID Support                  1          Running              core
+res_pjsip_config_wizard.so     PJSIP Config Wizard                      1          Running              core
+res_pjsip_dialog_info_body_generator.so PJSIP Extension State Dialog Info+XML Pr 0          Running              core
+res_pjsip_diversion.so         PJSIP Add Diversion Header Support       1          Running              core
+res_pjsip_dlg_options.so       SIP OPTIONS in dialog handler            0          Running              core
+res_pjsip_dtmf_info.so         PJSIP DTMF INFO Support                  0          Running              core
+res_pjsip_empty_info.so        PJSIP Empty INFO Support                 0          Running              core
+res_pjsip_endpoint_identifier_anonymous.so PJSIP Anonymous endpoint identifier      0          Running              core
+res_pjsip_endpoint_identifier_ip.so PJSIP IP endpoint identifier             0          Running              core
+res_pjsip_endpoint_identifier_user.so PJSIP username endpoint identifier       0          Running              core
+res_pjsip_exten_state.so       PJSIP Extension State Notifications      0          Running              core
+res_pjsip_header_funcs.so      PJSIP Header Functions                   0          Running              core
+res_pjsip_history.so           PJSIP History                            0          Running          extended
+res_pjsip_logger.so            PJSIP Packet Logger                      0          Running              core
+res_pjsip_messaging.so         PJSIP Messaging Support                  0          Running              core
+res_pjsip_mwi.so               PJSIP MWI resource                       0          Running              core
+res_pjsip_mwi_body_generator.so PJSIP MWI resource                       0          Running              core
+res_pjsip_nat.so               PJSIP NAT Support                        0          Running              core
+res_pjsip_notify.so            CLI/AMI PJSIP NOTIFY Support             0          Running              core
+res_pjsip_one_touch_record_info.so PJSIP INFO One Touch Recording Support   0          Running              core
+res_pjsip_outbound_authenticator_digest.so PJSIP authentication resource            0          Running              core
+res_pjsip_outbound_publish.so  PJSIP Outbound Publish Support           2          Running              core
+res_pjsip_outbound_registration.so PJSIP Outbound Registration Support      0          Running              core
+res_pjsip_path.so              PJSIP Path Header Support                0          Running              core
+res_pjsip_phoneprov_provider.so PJSIP Phoneprov Provider                 0          Running          extended
+res_pjsip_pidf_body_generator.so PJSIP Extension State PIDF Provider      0          Running              core
+res_pjsip_pidf_digium_body_supplement.so PJSIP PIDF Sangoma presence supplement   0          Running              core
+res_pjsip_pidf_eyebeam_body_supplement.so PJSIP PIDF Eyebeam supplement            0          Running              core
+res_pjsip_publish_asterisk.so  PJSIP Asterisk Event PUBLISH Support     0          Not Running          core
+res_pjsip_pubsub.so            PJSIP event resource                     12         Running              core
+res_pjsip_refer.so             PJSIP Blind and Attended Transfer Suppor 1          Running              core
+res_pjsip_registrar.so         PJSIP Registrar Support                  0          Running              core
+res_pjsip_rfc3326.so           PJSIP RFC3326 Support                    0          Running              core
+res_pjsip_sdp_rtp.so           PJSIP SDP RTP/AVP stream handler         0          Running              core
+res_pjsip_send_to_voicemail.so PJSIP REFER Send to Voicemail Support    0          Running              core
+res_pjsip_session.so           PJSIP Session resource                   18         Running              core
+res_pjsip_sips_contact.so      UAC SIPS Contact support                 0          Running              core
+res_pjsip_stir_shaken.so       PJSIP STIR/SHAKEN Module for Asterisk    0          Running              core
+res_pjsip_t38.so               PJSIP T.38 UDPTL Support                 0          Running              core
+res_pjsip_transport_websocket.so PJSIP WebSocket Transport Support        0          Running              core
+res_pjsip_xpidf_body_generator.so PJSIP Extension State PIDF Provider      0          Running              core
+48 modules loaded
+No ethernet interface found for seeding global EID. You will have to set it manually.
+No objects found.
+
+No ethernet interface found for seeding global EID. You will have to set it manually.
