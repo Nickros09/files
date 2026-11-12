@@ -1,0 +1,25 @@
+Повторная сборка единого DEB
+===========================
+1. Скачайте из корня этого репозитория asterisk-18.6.0-build-sources.tar.gz
+   и BUILD.ru.txt. Выполните исходную сборку Debian 9, чтобы получить
+   /job/work/pkg с установленным в staging-каталог Asterisk.
+2. В том же контейнере установите patchelf из репозитория Debian 9:
+   apt-get install patchelf
+   Проверенная версия: 0.9-1+b1.
+3. Поместите build-bundle.py в /job/work/bundle/ и выполните:
+   python3 /job/work/bundle/build-bundle.py
+4. Результат: /job/output/bundled/asterisk-custom_18.6.0-2+astra16.bundle_amd64.deb
+
+Сценарий собирает транзитивные DT_NEEDED-зависимости всех ELF в staging,
+исключает файлы libc6, копирует библиотеки в частный каталог, устанавливает
+RUNPATH каждого ELF и включает лицензии/версии исходных пакетов библиотек.
+Пути /job в сценарии предполагают mount корня рабочей сборки в /job.
+Зависимости сборки и загрузка архивных библиотек требуют сети.
+
+BUNDLED-LIBRARIES.tsv содержит точные версии бинарных и исходных пакетов
+Debian. Исходники можно получить из archive.debian.org (deb-src stretch и
+stretch/updates) с помощью apt-get source имя=версия, либо из snapshot.debian.org.
+Соответствие версий и ссылки на snapshot приведены в LIBRARY-SOURCES.txt.
+Бинарные файлы библиотек взяты из официальных архивных пакетов Debian 9.
+Asterisk/pjproject/jansson собраны с -march=x86-64 -mtune=generic и без
+BUILD_NATIVE. glibc не копируется и не меняется.
