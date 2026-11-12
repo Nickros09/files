@@ -1,0 +1,22 @@
+Повторная сборка
+===============
+Архив asterisk-18.6.0-build-sources.tar.gz содержит исходные архивы Asterisk,
+pjproject и jansson, а также setup.sh, compile.sh, package.py и smoke.sh.
+Распакуйте его в пустой каталог; там появятся work/ и output/.
+Запускайте команды внутри Debian 9 Stretch amd64 с этим каталогом,
+смонтированным в /job. setup.sh устанавливает зависимости сборки из
+archive.debian.org; требуется доступ к сети. HTTPS должен использовать
+доверенные сертификаты; если сеть использует TLS-прокси, передайте его CA.
+
+  bash /job/work/build/setup.sh
+  tar -xzf /job/work/sources/asterisk-18.6.0.tar.gz -C /job/work/sources
+  bash /job/work/build/compile.sh
+  cd /job/work/build
+  python3 package.py
+
+Исходная основа: debian:stretch
+Digest: sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be
+Сборка выполняется под root внутри изолированного контейнера.
+Бинарные файлы очищаются strip; владельцы файлов пакета root:root.
+В побитовую воспроизводимость входит дата/имя машины сборки, поэтому
+полученный контрольный хеш может отличаться.
